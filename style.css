@@ -4,7 +4,17 @@ body{
 }
 
 #contenedor {
-    width: 900px;
-    height: 900px;
+    width: 950px;
+    height: 950px;
+    padding: 10px;
     background-color: purple;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cuadrito { 
+    width: 56px;
+    height: 56px;
+    background-color: yellow;
 }
