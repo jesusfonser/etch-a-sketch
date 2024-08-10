@@ -1,0 +1,10 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor {
+    width: 900px;
+    height: 900px;
+    background-color: purple;
+}
