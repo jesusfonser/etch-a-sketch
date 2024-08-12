@@ -1,3 +1,7 @@
+function randomColorNumber () {
+    return Math.random() * 255
+}
+
 let contenedor = document.querySelector("#contenedor");
 
 
