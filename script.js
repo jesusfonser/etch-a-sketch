@@ -21,6 +21,14 @@ for (let i = 0; i < 256; i++){
     contenedor.appendChild(cuadrito);
 }
 cambiador.addEventListener("click", () => {
-    let numCuadritos = prompt("¿Cuántos cuadritos quieres por fila? (No puede ser más de 100)");
-    contenedor.textContent = '';
+    let numCuadritos = parseInt(prompt("¿Cuántos cuadritos quieres por fila? (No puede ser más de 100)"));
+    if (numCuadritos > 100 || !numCuadritos){
+        alert("Respuesta no válida.");
+    }
+
+    else{
+        contenedor.textContent = '';
+    }
+    
+    
 })
