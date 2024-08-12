@@ -5,9 +5,7 @@ function randomColorNumber () {
     return Math.floor(Math.random() * 256 + 0);
 }
 
-//Medidas de cada cuadrito: 56x56
-
-for (let i = 0; i < 256; i++){
+function addCuadrito (argContenedor) {
     let cuadrito = document.createElement("div");
     cuadrito.classList.add("cuadrito");
     cuadrito.addEventListener("mouseover", () => {
@@ -16,9 +14,14 @@ for (let i = 0; i < 256; i++){
             colorRandom[k] = randomColorNumber();
         }
         cuadrito.style.backgroundColor = `rgb(${colorRandom.toString()})`;
-
     })
-    contenedor.appendChild(cuadrito);
+    return argContenedor.appendChild(cuadrito)
+}
+
+//Medidas de cada cuadrito: 56x56
+
+for (let i = 0; i < 256; i++){
+    addCuadrito(contenedor);
 }
 cambiador.addEventListener("click", () => {
     let numCuadritos = parseInt(prompt("¿Cuántos cuadritos quieres por fila? (No puede ser más de 100)"));
@@ -28,6 +31,7 @@ cambiador.addEventListener("click", () => {
 
     else{
         contenedor.textContent = '';
+        
     }
     
     
