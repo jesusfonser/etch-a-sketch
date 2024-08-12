@@ -1,6 +1,9 @@
 body{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 #contenedor {
@@ -17,4 +20,9 @@ body{
     width: 56px;
     height: 56px;
     background-color: yellow;
+}
+
+#cambiador{
+    padding: 10px;
+    margin: 10px;
 }

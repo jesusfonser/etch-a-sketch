@@ -1,9 +1,9 @@
+let contenedor = document.querySelector("#contenedor");
+let cambiador = document.querySelector("#cambiador");
+
 function randomColorNumber () {
     return Math.floor(Math.random() * 256 + 0);
 }
-
-let contenedor = document.querySelector("#contenedor");
-
 
 //Medidas de cada cuadrito: 56x56
 
@@ -20,3 +20,7 @@ for (let i = 0; i < 256; i++){
     })
     contenedor.appendChild(cuadrito);
 }
+cambiador.addEventListener("click", () => {
+    let numCuadritos = prompt("¿Cuántos cuadritos quieres por fila? (No puede ser más de 100)");
+    contenedor.textContent = '';
+})
