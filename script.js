@@ -18,6 +18,7 @@ function addCuadrito (argContenedor, interruptor) {
     if (interruptor){
         cuadrito.style.height = "auto";
         cuadrito.style.width = "auto";
+        cuadrito.style.flex = "1";
     }
     return argContenedor.appendChild(cuadrito)
 }
@@ -35,9 +36,18 @@ cambiador.addEventListener("click", () => {
 
     else{
         contenedor.textContent = '';
-
+        contenedor.style.flexDirection = "column"
+        for (let i = 0; i < numCuadritos; i++){
+            console.log("buenas");
+            let miniCont = document.createElement("div");
+            miniCont.classList.add("miniCont");
+            contenedor.appendChild(miniCont);
+            for (let k = 0; k < numCuadritos; k++){
+                console.log("que tal");
+                addCuadrito(miniCont, true);
+            }
         }
     }
     
     
-)
+})

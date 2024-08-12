@@ -6,6 +6,11 @@ body{
     align-items: center;
 }
 
+.miniCont{
+    display: flex;
+    flex: 1;
+}
+
 #contenedor {
     width: 950px;
     height: 950px;
@@ -14,6 +19,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
 }
 
 .cuadrito { 
