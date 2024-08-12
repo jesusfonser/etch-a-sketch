@@ -5,7 +5,7 @@ function randomColorNumber () {
     return Math.floor(Math.random() * 256 + 0);
 }
 
-function addCuadrito (argContenedor) {
+function addCuadrito (argContenedor, interruptor) {
     let cuadrito = document.createElement("div");
     cuadrito.classList.add("cuadrito");
     cuadrito.addEventListener("mouseover", () => {
@@ -15,6 +15,10 @@ function addCuadrito (argContenedor) {
         }
         cuadrito.style.backgroundColor = `rgb(${colorRandom.toString()})`;
     })
+    if (interruptor){
+        cuadrito.style.height = "auto";
+        cuadrito.style.width = "auto";
+    }
     return argContenedor.appendChild(cuadrito)
 }
 
@@ -31,8 +35,9 @@ cambiador.addEventListener("click", () => {
 
     else{
         contenedor.textContent = '';
-        
+
+        }
     }
     
     
-})
+)
